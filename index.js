@@ -13,5 +13,7 @@ todoController(app);
 app.use(express.static('./'))
 
 //listen to port
-app.listen(3000)
-console.log('Online')
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
