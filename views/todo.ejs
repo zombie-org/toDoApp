@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src= "https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="./assets/todo-list.js"></script>
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <title>Todo App</title>
+  </head>
+  <body>
+    <h1>My Todo App</h1>
+    <div id = "todo-table">
+
+      <form>
+        <input type="text" name="item" placeholder="Enter task..." required />
+        <button type="submit">Add Item</button>
+      </form>
+      <ul>
+        <% todo.forEach(function(item){ %>
+          <li><%=item['item'] %></li>
+        <%});%>
+
+      </ul>
+    </div>
+  </body>
+</html>
